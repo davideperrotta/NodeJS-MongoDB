@@ -1,0 +1,21 @@
+<div id="footer">
+    <h2>Links:</h2>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <%if (!token?.length > 0) { %>
+        <li>
+            <a href="/login">Login</a>
+        </li>
+        <% } %>
+        <%if (token?.length > 0) { %>
+            <li>
+                <a href="/protected">Add Posts</a>
+            </li>
+            <li>
+                <a href="/logout">Logout</a>
+            </li>
+        <% } %>
+    </ul>
+</div>

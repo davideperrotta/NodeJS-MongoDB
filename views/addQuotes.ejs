@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Posts</title>
+  <%- include('./partials/header'); %>
+</head>
+<body>
+    <h1>Add new post</h1>
+    <form action="/quotes" method="POST">
+        <div>
+          <textarea rows="4" cols="50" name="quote" placeholder="Write post..."></textarea>
+        </div>
+        <input type="hidden" name="name" value="<%= username %>" />
+        <button type="submit">Submit</button>
+      </form>
+      <%- include('./partials/footer'); %>
+</body>
+</html>
